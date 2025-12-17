@@ -20,16 +20,17 @@ public class BinarySearchTree<T extends Comparable<T>>
 	/*
  * Specific add for morse code since it uses code to store element
  */
+@Override
 public void add(T element)
 {
-    BinarySearchTreeNode<T> newNode =
-            new BinarySearchTreeNode<T>(element);
+    BinarySearchTreeNode<T> newNode = new BinarySearchTreeNode<T>(element);
 
     if (root == null)
         root = newNode;
     else
         root.addNode(newNode);
 }
+
 
 /*
  * Specific add for morse code since it uses code to store element

@@ -1,6 +1,3 @@
-/**
- * 
- */
 
 /**
  * @author Professor Bamford
@@ -96,6 +93,25 @@ public void addNode(BinarySearchTreeNode<T> newNode, int start, String code)
             right = newNode;
         else
             right.addNode(newNode, start + 1, code);
+    }
+}
+public void addNode(BinarySearchTreeNode<T> newNode)
+{
+    int comp = newNode.info.compareTo(this.info);
+
+    if (comp < 0)
+    {
+        if (left == null)
+            left = newNode;
+        else
+            left.addNode(newNode);
+    }
+    else if (comp > 0)
+    {
+        if (right == null)
+            right = newNode;
+        else
+            right.addNode(newNode);
     }
 }
 
